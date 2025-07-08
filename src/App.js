@@ -1,6 +1,8 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import HomePage from "./pages/HomePage";
 import ControllerPage from "./pages/ControllerPage";
+import LoginPage from "./pages/LoginPage";
+import OrderFormsPage from "./pages/OrderFormsPage";
 import { useEffect, useState } from "react";
 
 function App() {
@@ -35,6 +37,8 @@ function App() {
       <Router>
         <Routes>
           <Route path="/" element={<HomePage />} />
+          <Route path="/login" element={<LoginPage />} />
+          <Route path="/order-forms" element={<OrderFormsPage />} />
           <Route path="/controller" element={<ControllerPage />} />
         </Routes>
       </Router>

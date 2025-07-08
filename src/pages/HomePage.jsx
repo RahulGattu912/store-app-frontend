@@ -1,3 +1,4 @@
+// HomePage.jsx
 import { useNavigate } from "react-router-dom";
 
 const stores = ["Fremont", "Milpitas", "Sunnyvale", "Karthik"];
@@ -5,15 +6,12 @@ const stores = ["Fremont", "Milpitas", "Sunnyvale", "Karthik"];
 export default function HomePage() {
   const navigate = useNavigate();
   const handleStoreSelect = (store) => {
-    // Replace this with your actual navigation logic
-    // console.log(`Navigating to /controller?store=${store}`);
-    navigate(`/controller?store=${store}`);
+    navigate(`/login?store=${store}`);
   };
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-indigo-50 via-white to-purple-50 dark:from-gray-900 dark:via-gray-950 dark:to-gray-900 flex items-center justify-center p-4">
       <div className="w-full max-w-md">
-        {/* Header Section */}
         <div className="text-center mb-12">
           <div className="mb-4">
             <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-blue-600 to-purple-600 dark:from-blue-900 dark:to-purple-900 rounded-full shadow-lg mb-6">
@@ -39,8 +37,6 @@ export default function HomePage() {
             Select a location to start ordering
           </p>
         </div>
-
-        {/* Store Selection Buttons */}
         <div className="space-y-4">
           {stores.map((store, idx) => (
             <button
@@ -99,10 +95,10 @@ export default function HomePage() {
             </button>
           ))}
         </div>
-
-        {/* Footer */}
         <div className="text-center mt-12">
-          <p className="text-sm text-gray-500 dark:text-gray-400">Need help? Contact support</p>
+          <p className="text-sm text-gray-500 dark:text-gray-400">
+            Need help? Contact support
+          </p>
         </div>
       </div>
     </div>
